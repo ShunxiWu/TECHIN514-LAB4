@@ -1,0 +1,3 @@
+In this lab, we used BLE to connect two ESP32S3 XIAO boards to transmit data between these devices. The distance data is collected from HC-SR04 ultrasonic sensor.
+- `xiao-bluetooth-client` folder stores code in the client ESP32S3, which receives data, calculate max and min values, and prints these data in the Serial monitor.
+- `xiao-bluetooth-server` folder stores code in the server ESP32S3, which builds a BLE server, reads sensor data from HC-SR04, filters the raw data using a __moving average filter__, and finally sends data to BLE client if the distance is less than 30cm.
